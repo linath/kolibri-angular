@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 
-import IMG_FRAMEWORK from '../../assets/logo.angular.png';
+import {Components} from "@public-ui/components";
 
 @Component({
-	selector: 'app',
-	templateUrl: 'component.html',
+    selector: 'app',
+    templateUrl: 'component.html',
 })
 export class AppComponent {
-	public readonly framework = IMG_FRAMEWORK;
+    public changed($event: Event) {
+				console.log("changed", $event);
+    }
 }
